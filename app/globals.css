@@ -8,30 +8,37 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: 0 0% 98%;
+    --foreground: 36 5% 13%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 36 5% 13%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
+    --popover-foreground: 36 5% 13%;
+    --primary: 315 68% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 36 5% 96%;
+    --secondary-foreground: 36 5% 13%;
+    --muted: 36 5% 96%;
+    --muted-foreground: 36 5% 45%;
+    --accent: 315 68% 96%;
+    --accent-foreground: 315 68% 30%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --border: 36 5% 88%;
+    --input: 36 5% 88%;
+    --ring: 315 68% 50%;
+    
+    /* Trend indicator colors with good contrast */
+    --emerald-500: 142 72% 29%;
+    --rose-500: 336 80% 58%;
+    
+    /* Chart colors - using the purple palette for better consistency */
+    --chart-1: 315 68% 50%;
+    --chart-2: 315 60% 40%;
+    --chart-3: 315 50% 60%;
+    --chart-4: 315 75% 65%;
+    --chart-5: 315 40% 35%;
+    
     --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -43,32 +50,71 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
     
     /* Purple color scale - light theme */
-    --purple-1: #fefcfe;
-    --purple-2: #fbf7fe;
-    --purple-3: #f7edfe;
-    --purple-4: #f2e3fd;
-    --purple-5: #edd8fc;
-    --purple-6: #e6c8fa;
-    --purple-7: #d9aef7;
-    --purple-8: #c586f0;
-    --purple-9: #b065e4;
-    --purple-10: #a45dd6;
-    --purple-11: #9356c5;
-    --purple-12: #6931a6;
+    --purple-1: #f9f6fa;
+    --purple-2: #f6f1f9;
+    --purple-3: #f3e5f9;
+    --purple-4: #eed8f8;
+    --purple-5: #e8caf5;
+    --purple-6: #dfbaf0;
+    --purple-7: #d3a3e8;
+    --purple-8: #c586df;
+    --purple-9: #a138c7;
+    --purple-10: #902fb2;
+    --purple-11: #8c2bae;
+    --purple-12: #501265;
+
+    --purple-a1: #c82ffb05;
+    --purple-a2: #9415e10a;
+    --purple-a3: #a907ef16;
+    --purple-a4: #a303ec23;
+    --purple-a5: #9d01e031;
+    --purple-a6: #9203d442;
+    --purple-a7: #8a01c759;
+    --purple-a8: #8902c177;
+    --purple-a9: #8700b8c6;
+    --purple-a10: #7801a2d0;
+    --purple-a11: #76019fd4;
+    --purple-a12: #430059ed;
+
+    --purple-contrast: #fff;
+    --purple-surface: #f5eff9cc;
+    --purple-indicator: #a138c7;
+    --purple-track: #a138c7;
     
     /* Gray color scale - light theme */
-    --gray-1: #fcfcfc;
-    --gray-2: #f9f9f9;
-    --gray-3: #f0f0f0;
-    --gray-4: #e8e8e8;
-    --gray-5: #e0e0e0;
-    --gray-6: #d9d9d9;
-    --gray-7: #cecece;
-    --gray-8: #bbbbbb;
-    --gray-9: #8d8d8d;
-    --gray-10: #838383;
-    --gray-11: #646464;
-    --gray-12: #202020;
+    --gray-1: #f8f7f7;
+    --gray-2: #f5f3f2;
+    --gray-3: #ece9e8;
+    --gray-4: #e5e1df;
+    --gray-5: #ded9d8;
+    --gray-6: #d7d0cf;
+    --gray-7: #cdc5c3;
+    --gray-8: #bbb1ae;
+    --gray-9: #8e827f;
+    --gray-10: #837875;
+    --gray-11: #635a58;
+    --gray-12: #251e1c;
+
+    --gray-a1: #7b3b3b04;
+    --gray-a2: #6d341809;
+    --gray-a3: #3f160913;
+    --gray-a4: #3b16041c;
+    --gray-a5: #2e0a0323;
+    --gray-a6: #3007012c;
+    --gray-a7: #310d0439;
+    --gray-a8: #2c0b014e;
+    --gray-a9: #2008027e;
+    --gray-a10: #1b060088;
+    --gray-a11: #130502a6;
+    --gray-a12: #0b0301e3;
+
+    --gray-contrast: #FFFFFF;
+    --gray-surface: #ffffffcc;
+    --gray-indicator: #8e827f;
+    --gray-track: #8e827f;
+    
+    /* Background color */
+    --color-background: #fafafa;
   }
   
   .dark {
@@ -109,12 +155,16 @@ body {
     --input: 20 10% 21%;
     --ring: 290 30% 48%;
     
-    /* Chart colors */
+    /* Trend indicator colors with good contrast */
+    --emerald-500: 142 46% 55%;
+    --rose-500: 336 74% 51%;
+    
+    /* Chart colors - updated to use purple palette instead of brown */
     --chart-1: 290 30% 50%;
     --chart-2: 290 30% 38%;
     --chart-3: 290 30% 26%;
-    --chart-4: 20 10% 43%;
-    --chart-5: 20 10% 29%;
+    --chart-4: 290 40% 60%;
+    --chart-5: 290 50% 30%;
     
     /* Sidebar */
     --sidebar-background: 300 15% 11%;
@@ -197,6 +247,72 @@ body {
 
 @supports (color: color(display-p3 1 1 1)) {
   @media (color-gamut: p3) {
+    :root, .light, .light-theme {
+      --purple-1: oklch(97.7% 0.0052 315.4);
+      --purple-2: oklch(96.5% 0.0108 315.4);
+      --purple-3: oklch(93.9% 0.0309 315.4);
+      --purple-4: oklch(91.1% 0.0492 315.4);
+      --purple-5: oklch(87.8% 0.0661 315.4);
+      --purple-6: oklch(83.8% 0.0844 315.4);
+      --purple-7: oklch(78.4% 0.1082 315.4);
+      --purple-8: oklch(71.5% 0.1424 315.4);
+      --purple-9: oklch(55.4% 0.2189 315.4);
+      --purple-10: oklch(50.8% 0.2038 315.4);
+      --purple-11: oklch(49.6% 0.2038 315.4);
+      --purple-12: oklch(33.2% 0.1402 315.4);
+
+      --purple-a1: color(display-p3 0.4902 0 0.9804 / 0.016);
+      --purple-a2: color(display-p3 0.4392 0 0.7647 / 0.036);
+      --purple-a3: color(display-p3 0.5608 0 0.8902 / 0.084);
+      --purple-a4: color(display-p3 0.5059 0 0.8627 / 0.132);
+      --purple-a5: color(display-p3 0.502 0 0.8157 / 0.188);
+      --purple-a6: color(display-p3 0.4706 0 0.7647 / 0.252);
+      --purple-a7: color(display-p3 0.451 0.0039 0.7294 / 0.34);
+      --purple-a8: color(display-p3 0.4431 0 0.7059 / 0.452);
+      --purple-a9: color(display-p3 0.451 0 0.6784 / 0.748);
+      --purple-a10: color(display-p3 0.3961 0 0.5922 / 0.784);
+      --purple-a11: color(display-p3 0.3882 0 0.5804 / 0.8);
+      --purple-a12: color(display-p3 0.2157 0 0.3216 / 0.908);
+
+      --purple-contrast: #fff;
+      --purple-surface: color(display-p3 0.9569 0.9412 0.9725 / 0.8);
+      --purple-indicator: oklch(55.4% 0.2189 315.4);
+      --purple-track: oklch(55.4% 0.2189 315.4);
+      
+      --gray-1: oklch(97.7% 0.0016 36.49);
+      --gray-2: oklch(96.5% 0.0022 36.49);
+      --gray-3: oklch(93.6% 0.0033 36.49);
+      --gray-4: oklch(91.2% 0.005 36.49);
+      --gray-5: oklch(88.8% 0.0056 36.49);
+      --gray-6: oklch(86.3% 0.0073 36.49);
+      --gray-7: oklch(82.9% 0.0091 36.49);
+      --gray-8: oklch(76.8% 0.0122 36.49);
+      --gray-9: oklch(61.7% 0.0151 36.49);
+      --gray-10: oklch(58.2% 0.0141 36.49);
+      --gray-11: oklch(47.6% 0.0116 36.49);
+      --gray-12: oklch(24.3% 0.0117 36.49);
+
+      --gray-a1: color(display-p3 0.3294 0 0 / 0.012);
+      --gray-a2: color(display-p3 0.3686 0.1255 0 / 0.032);
+      --gray-a3: color(display-p3 0.1647 0.0549 0 / 0.072);
+      --gray-a4: color(display-p3 0.1843 0.0745 0 / 0.108);
+      --gray-a5: color(display-p3 0.1451 0.0314 0 / 0.136);
+      --gray-a6: color(display-p3 0.1608 0.0235 0 / 0.172);
+      --gray-a7: color(display-p3 0.1608 0.0392 0 / 0.22);
+      --gray-a8: color(display-p3 0.1451 0.0392 0 / 0.304);
+      --gray-a9: color(display-p3 0.1059 0.0275 0 / 0.492);
+      --gray-a10: color(display-p3 0.0902 0.0235 0 / 0.532);
+      --gray-a11: color(display-p3 0.0549 0.0118 0 / 0.648);
+      --gray-a12: color(display-p3 0.0353 0.0078 0 / 0.888);
+
+      --gray-contrast: #FFFFFF;
+      --gray-surface: color(display-p3 1 1 1 / 80%);
+      --gray-indicator: oklch(61.7% 0.0151 36.49);
+      --gray-track: oklch(61.7% 0.0151 36.49);
+      
+      --color-background: #fafafa;
+    }
+    
     .dark {
       --purple-1: oklch(21.3% 0.02 316.4);
       --purple-2: oklch(22.8% 0.0332 316.4);

@@ -1,11 +1,11 @@
 ---
 description: Follow these rules when working on the frontend
-globs: 
+globs: app/**/*.tsx, app/**/*.ts, components/**/*.tsx, components/**/*.ts, _components/**/*.tsx, _components/**/*.ts, lib/hooks/**/*.ts, lib/hooks/**/*.tsx, tailwind.config.ts, next.config.js, *.css
 alwaysApply: false
 ---
 ---
 description: Follow these rules when working on the frontend.
-globs: 
+globs: app/**/*.tsx, app/**/*.ts, components/**/*.tsx, components/**/*.ts, _components/**/*.tsx, _components/**/*.ts, lib/hooks/**/*.ts, lib/hooks/**/*.tsx, tailwind.config.ts, next.config.js, *.css
 ---
 ### Frontend Rules
 
@@ -14,7 +14,7 @@ It uses Next.js, Tailwind, Shadcn, and Framer Motion.
 #### General Rules
 
 - Use `lucide-react` for icons
-- Use Shaden UI components with proper composition and customization
+- Use Shadcn UI components with proper composition and customization
 - Always use `type` instead of `interface` to define the types
 - Follow Tailwind CSS class naming conventions and utility patterns
 - Implement mobile-first responsive design with Tailwind breakpoints
@@ -25,7 +25,8 @@ It uses Next.js, Tailwind, Shadcn, and Framer Motion.
 
 #### Color rules
 
-There are 12 steps in each scale. Each step was designed for at least one specific use case
+- There are 12 steps in each scale. Each step was designed for at least one specific use case
+- Reference the steps and colors from [globals.css](mdc:app/globals.css) and [tailwind.config.ts](mdc:tailwind.config.ts)
 
 ##### Steps 1–2: Backgrounds
 Steps 1 and 2 are designed for app backgrounds and subtle component backgrounds. You can use them interchangeably, depending on the vibe you're going for.

@@ -1,6 +1,7 @@
 ---
 description: Follow these rules for all requests.
 globs: 
+alwaysApply: true
 ---
 ---
 description: Follow these rules for all requests.
@@ -61,6 +62,7 @@ Follow these rules when building the app.
 - Use kebab case for all files and folders unless otherwise specified
 - Don't update shadcn components unless otherwise specified
 - Always use `type` instead of `interface` to define the types
+- when you create a new file make sure to add a comment in the <ai_context> tags at the top of the file with the changes you've made and when you update/make changes to a file, make sure to rewrite the comment at the top of the file that are in the <ai_context> tags with the changes you've made. If there's no comment then add one.
 
 #### Env Rules
 

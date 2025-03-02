@@ -53,6 +53,7 @@ Follow these rules when building the app.
 - Use kebab case for all files and folders unless otherwise specified
 - Don't update shadcn components unless otherwise specified
 - use `bun` for all commands unless otherwise specified
+- when you create a new file make sure to add a comment in the <ai_context> tags at the top of the file with the changes you've made and when you update/make changes to a file, make sure to rewrite the comment at the top of the file that are in the <ai_context> tags with the changes you've made. If there's no comment then add one.
 
 #### Env Rules
 
@@ -99,7 +100,7 @@ It uses Next.js, Tailwind, Shadcn, and Framer Motion.
 
 #### General Rules
 - Use `lucide-react` for icons
-- Use Shaden UI components with proper composition and customization
+- Use Shadcn UI components with proper composition and customization
 - Always use `type` instead of `interface` to define the types
 - Follow Tailwind CSS class naming conventions and utility patterns
 - Implement mobile-first responsive design with Tailwind breakpoints
@@ -109,8 +110,8 @@ It uses Next.js, Tailwind, Shadcn, and Framer Motion.
 - Optimize component bundle size through proper code splitting
 
 #### Color rules
-
-There are 12 steps in each scale. Each step was designed for at least one specific use case
+- There are 12 steps in each scale. Each step was designed for at least one specific use case
+- Reference the steps and colors from @globals.css and @tailwind.config.ts
 
 ##### Steps 1–2: Backgrounds
 Steps 1 and 2 are designed for app backgrounds and subtle component backgrounds. You can use them interchangeably, depending on the vibe you're going for.
